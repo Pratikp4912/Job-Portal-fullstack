@@ -93,14 +93,22 @@ job_portal_flask/
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone Repository
-
-```bash
 git clone https://github.com/yourusername/flask-job-portal-system.git
+
+### 2️⃣ Create Virtual Environment
+
 cd flask-job-portal-system
 python -m venv venv
 venv\Scripts\activate
+
+### 3️⃣ Install Dependencies
 pip install -r requirements.txt
+
+### 4️⃣ Run the Application
 python app.py
+
+### 4️⃣ Run the Application
 http://127.0.0.1:5000
+
 
 
