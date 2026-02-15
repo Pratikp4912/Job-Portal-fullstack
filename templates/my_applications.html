@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3 class="mb-4">My Applications</h3>
+
+{% if applications %}
+    {% for app in applications %}
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <p><strong>Job ID:</strong> {{ app.job_id }}</p>
+                <p><strong>Applied On:</strong> {{ app.applied_at.strftime('%d %b %Y') }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>You haven’t applied for any jobs yet.</p>
+{% endif %}
+
+{% endblock %}

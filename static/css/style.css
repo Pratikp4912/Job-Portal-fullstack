@@ -1,0 +1,46 @@
+/* Background */
+body {
+    background: linear-gradient(120deg, #1f4037, #99f2c8);
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Center card */
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+/* Card */
+.auth-card {
+    background: #ffffff;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Inputs */
+.auth-input {
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.auth-input:focus {
+    border-color: #1f4037;
+    box-shadow: 0 0 0 0.15rem rgba(31,64,55,0.25);
+}
+.job-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}

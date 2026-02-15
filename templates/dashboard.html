@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="auth-wrapper">
+    <div class="auth-card text-center">
+
+        <h2 class="mb-2">Welcome 👋</h2>
+        <p class="text-muted">
+            {{ current_user.email }} ({{ current_user.role | capitalize }})
+        </p>
+
+        <hr class="my-4">
+
+        {% if current_user.role == 'employer' %}
+            <a href="{{ url_for('post_job') }}" class="btn btn-success w-100 mb-3">
+                ➕ Post a Job
+            </a>
+
+            <a href="{{ url_for('my_jobs') }}" class="btn btn-outline-success w-100 mb-3">
+                📋 My Job Listings
+            </a>
+        {% endif %}
+
+        {% if current_user.role == 'jobseeker' %}
+    <a href="{{ url_for('jobs') }}" class="btn btn-primary w-100 mb-3">
+        🔍 Browse Jobs
+    </a>
+    <a href="{{ url_for('my_applications') }}" class="btn btn-outline-primary w-100 mb-3">
+        📄 My Applications
+    </a>
+{% endif %}
+
+
+        <a href="{{ url_for('logout') }}" class="btn btn-danger w-100">
+            🚪 Logout
+        </a>
+
+    </div>
+</div>
+
+{% endblock %}
